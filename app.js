@@ -62,7 +62,7 @@ function renderNavigation() {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 2. HERO SECTION & PROFILE AVATAR                                           */
+/* 2. HERO SECTION & PROFILE DATA                                             */
 /* -------------------------------------------------------------------------- */
 function renderHero(data) {
   const profile = data.profile;
@@ -70,7 +70,6 @@ function renderHero(data) {
   const headlineEl = document.getElementById('hero-headline');
   const subheadlineEl = document.getElementById('hero-subheadline');
   const badgeEl = document.getElementById('hero-badge-text');
-  const charImgEl = document.getElementById('hero-character-img');
   const downloadResumeBtn = document.getElementById('hero-download-resume-btn');
 
   if (nameEl) nameEl.textContent = profile.name;
@@ -78,21 +77,10 @@ function renderHero(data) {
   if (subheadlineEl) subheadlineEl.textContent = profile.subheadline;
   if (badgeEl) badgeEl.textContent = profile.tagline;
 
-  // Render high-res avatar image with fallback
-  if (charImgEl) {
-    charImgEl.src = profile.characterImg || "https://github.com/mukteswarnayak17.png";
-    charImgEl.alt = `${profile.name} - Data Analyst`;
-    charImgEl.onerror = () => {
-      charImgEl.src = "https://github.com/mukteswarnayak17.png";
-    };
-  }
-
-  // Resume download link
   if (downloadResumeBtn && profile.resumePdf) {
     downloadResumeBtn.href = profile.resumePdf;
   }
 
-  // Render Metric Quick Ribbon
   const statsContainer = document.getElementById('hero-quick-stats');
   if (statsContainer) {
     statsContainer.innerHTML = data.stats.map(s => `
@@ -263,7 +251,6 @@ function renderProjects(data) {
     </div>
   `).join('');
 
-  // Project modal open listener
   container.addEventListener('click', (e) => {
     const btn = e.target.closest('.open-case-study');
     if (btn) {
@@ -273,7 +260,6 @@ function renderProjects(data) {
     }
   });
 
-  // Filter Bar logic
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -546,7 +532,7 @@ function renderContact(data) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 11. 3D TILT EFFECT (Fixed to eliminate stutter & lag)                      */
+/* 11. 3D TILT EFFECT                                                         */
 /* -------------------------------------------------------------------------- */
 function initTiltEffects() {
   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -580,7 +566,7 @@ function initTiltEffects() {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 12. SCROLL SPY (Fixed to track mobile menu & bottom section)              */
+/* 12. SCROLL SPY                                                             */
 /* -------------------------------------------------------------------------- */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
@@ -641,7 +627,7 @@ function initMobileMenu() {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 14. SCROLL REVEAL (Interactive Smooth Transition on Scroll)                */
+/* 14. SCROLL REVEAL                                                          */
 /* -------------------------------------------------------------------------- */
 function initScrollReveal() {
   const elements = document.querySelectorAll('.section-header, .about-highlight-card, .skill-card, .project-3d-card, .timeline-entry');
