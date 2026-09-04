@@ -61,7 +61,7 @@
   </header>
 
   <!-- ========================================================================= -->
-  <!-- 2. HERO SECTION: 3D ANIMATION & CHARACTER PORTRAIT WITH MATCHED BACKGROUND-->
+  <!-- 2. HERO SECTION: 3D ANIMATION & YOUR ANIMATED PHOTO                       -->
   <!-- ========================================================================= -->
   <section class="hero-section" id="hero">
     <!-- Interactive 3D Background -->
@@ -98,173 +98,16 @@
           </div>
         </div>
 
-        <!-- Right: Character Image with High-Contrast Cybernetic Background -->
+        <!-- Right: Your Animated Profile Photo with Glowing Cyber Frame -->
         <div class="hero-character-wrapper" id="hero-character-slot">
           <div class="hero-character-stage" data-tilt>
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 720" width="100%" height="100%" class="hero-character-standalone" id="mukteswar-character-svg" aria-label="Mukteswar Nayak - Animated Character Portrait">
-              <defs>
-                <!-- High-contrast ambient portal gradient matching the red/white theme -->
-                <radialGradient id="portalBackdrop" cx="50%" cy="45%" r="55%">
-                  <stop offset="0%" stop-color="#2a0814" stop-opacity="0.95"/>
-                  <stop offset="50%" stop-color="#18050c" stop-opacity="0.90"/>
-                  <stop offset="85%" stop-color="#0a0205" stop-opacity="0.98"/>
-                  <stop offset="100%" stop-color="#ff2a51" stop-opacity="0.35"/>
-                </radialGradient>
-
-                <radialGradient id="characterGlow" cx="50%" cy="40%" r="50%">
-                  <stop offset="0%" stop-color="#ff2a51" stop-opacity="0.55"/>
-                  <stop offset="45%" stop-color="#e11d48" stop-opacity="0.25"/>
-                  <stop offset="75%" stop-color="#ffffff" stop-opacity="0.08"/>
-                  <stop offset="100%" stop-color="#070305" stop-opacity="0"/>
-                </radialGradient>
-
-                <!-- Luminous Rim Lights to separate dark shirt and dark hair from background -->
-                <linearGradient id="rimLightGlow" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#ff2a51"/>
-                  <stop offset="50%" stop-color="#ffffff"/>
-                  <stop offset="100%" stop-color="#ff2a51"/>
-                </linearGradient>
-
-                <linearGradient id="hairRimLight" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#fda4af"/>
-                  <stop offset="50%" stop-color="#e11d48"/>
-                  <stop offset="100%" stop-color="#242426"/>
-                </linearGradient>
-
-                <radialGradient id="skinGrad" cx="50%" cy="35%" r="55%">
-                  <stop offset="0%" stop-color="#e8a87c"/>
-                  <stop offset="65%" stop-color="#d38e5f"/>
-                  <stop offset="100%" stop-color="#b87346"/>
-                </radialGradient>
-
-                <linearGradient id="neckGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#995831"/>
-                  <stop offset="100%" stop-color="#c98254"/>
-                </linearGradient>
-
-                <linearGradient id="hairDark" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#2c2d33"/>
-                  <stop offset="60%" stop-color="#18191c"/>
-                  <stop offset="100%" stop-color="#0f1012"/>
-                </linearGradient>
-
-                <linearGradient id="blackSilkShirt" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#2d323a"/>
-                  <stop offset="25%" stop-color="#1c1f24"/>
-                  <stop offset="70%" stop-color="#121418"/>
-                  <stop offset="100%" stop-color="#0a0c0f"/>
-                </linearGradient>
-
-                <linearGradient id="collarGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#3b424d"/>
-                  <stop offset="100%" stop-color="#1f2329"/>
-                </linearGradient>
-
-                <linearGradient id="silverChain" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#cbd5e1"/>
-                  <stop offset="50%" stop-color="#ffffff"/>
-                  <stop offset="100%" stop-color="#94a3b8"/>
-                </linearGradient>
-              </defs>
-
-              <style>
-                .char-float-anim { transform-origin: 230px 480px; animation: charFloatKey 4s ease-in-out infinite alternate; }
-                .char-eyes-blink { transform-origin: 230px 220px; animation: charBlinkKey 5.5s infinite; }
-                .char-aura-pulse { animation: charAuraKey 3.5s ease-in-out infinite alternate; }
-                .orbit-ring-spin { transform-origin: 230px 380px; animation: ringRotate 24s linear infinite; }
-                @keyframes charFloatKey { 0% { transform: translateY(0px); } 100% { transform: translateY(-12px); } }
-                @keyframes charBlinkKey { 0%, 96%, 100% { transform: scaleY(1); } 98% { transform: scaleY(0.12); } }
-                @keyframes charAuraKey { 0% { opacity: 0.75; transform: scale(0.97); } 100% { opacity: 1; transform: scale(1.03); } }
-                @keyframes ringRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-              </style>
-
-              <!-- Backing Portal & Concentric Cyber Rings (Ensures high contrast on dark background) -->
-              <ellipse cx="230" cy="380" rx="205" ry="305" fill="url(#portalBackdrop)" stroke="rgba(255, 42, 81, 0.45)" stroke-width="2"/>
-              <ellipse cx="230" cy="380" rx="215" ry="315" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.2" stroke-dasharray="6 8" class="orbit-ring-spin"/>
-              <ellipse cx="230" cy="360" rx="195" ry="295" fill="url(#characterGlow)" class="char-aura-pulse"/>
-
-              <!-- Character Body (Exact artwork with high-visibility rim lighting) -->
-              <g class="char-float-anim">
-                <!-- Shoulders and Torso with illuminated border -->
-                <path d="M 75 720 L 85 540 Q 105 400 170 380 L 230 435 L 290 380 Q 355 400 375 540 L 385 720 Z" 
-                      fill="url(#blackSilkShirt)" 
-                      stroke="url(#rimLightGlow)" 
-                      stroke-width="2.2"/>
-                <path d="M 85 540 Q 120 440 170 395" fill="none" stroke="#ff4d6d" stroke-width="2.5" opacity="0.65"/>
-                <path d="M 375 540 Q 340 440 290 395" fill="none" stroke="#ff4d6d" stroke-width="2.5" opacity="0.65"/>
-
-                <!-- Center Placket & Buttons -->
-                <path d="M 227 450 L 227 720 L 233 720 L 233 450 Z" fill="#20232b"/>
-                <circle cx="230" cy="495" r="3.5" fill="#e2e8f0"/>
-                <circle cx="230" cy="555" r="3.5" fill="#e2e8f0"/>
-                <circle cx="230" cy="615" r="3.5" fill="#e2e8f0"/>
-                <circle cx="230" cy="675" r="3.5" fill="#e2e8f0"/>
-
-                <!-- Open Collar Wings -->
-                <path d="M 170 380 L 230 460 L 202 468 L 138 402 Z" fill="url(#collarGrad)" stroke="#ff2a51" stroke-width="1.2"/>
-                <path d="M 290 380 L 230 460 L 258 468 L 322 402 Z" fill="url(#collarGrad)" stroke="#ff2a51" stroke-width="1.2"/>
-
-                <!-- Neck & Chest V-Opening -->
-                <path d="M 188 285 L 188 385 L 272 385 L 272 285 Z" fill="url(#neckGrad)"/>
-                <path d="M 195 305 L 195 395 L 265 395 L 265 305 Z" fill="#c98254"/>
-
-                <!-- Delicate Silver Chain -->
-                <path d="M 200 345 Q 230 388 260 345" fill="none" stroke="url(#silverChain)" stroke-width="3" stroke-linecap="round"/>
-
-                <!-- Ears -->
-                <path d="M 134 220 Q 120 236 134 262 Q 143 266 148 244 Z" fill="#c47d51"/>
-                <path d="M 136 230 Q 130 240 136 250" fill="none" stroke="#995831" stroke-width="2"/>
-                <path d="M 326 220 Q 340 236 326 262 Q 317 266 312 244 Z" fill="#c47d51"/>
-                <path d="M 324 230 Q 330 240 324 250" fill="none" stroke="#995831" stroke-width="2"/>
-
-                <!-- Facial Contour -->
-                <path d="M 144 175 Q 138 255 166 295 Q 200 330 230 332 Q 260 330 294 295 Q 322 255 316 175 Q 300 115 230 115 Q 160 115 144 175 Z" fill="url(#skinGrad)" stroke="#ba6a3d" stroke-width="1"/>
-
-                <!-- Soft Cheek Tone -->
-                <ellipse cx="172" cy="260" rx="16" ry="8" fill="#d97746" opacity="0.4"/>
-                <ellipse cx="288" cy="260" rx="16" ry="8" fill="#d97746" opacity="0.4"/>
-
-                <!-- Nose -->
-                <path d="M 226 210 Q 230 245 222 252 Q 230 256 238 252 Q 232 238 234 210" fill="#ba6a3d" opacity="0.6"/>
-                <ellipse cx="230" cy="252" rx="6.5" ry="3.5" fill="#a4562c" opacity="0.5"/>
-
-                <!-- Animated Blinking Eyes -->
-                <g class="char-eyes-blink">
-                  <path d="M 172 220 Q 190 207 208 220 Q 190 231 172 220 Z" fill="#ffffff"/>
-                  <ellipse cx="190" cy="219" rx="7.5" ry="7.5" fill="#2d1a10"/>
-                  <circle cx="190" cy="219" r="4.2" fill="#0f0906"/>
-                  <circle cx="192.5" cy="217" r="2" fill="#ffffff"/>
-                  <path d="M 252 220 Q 270 207 288 220 Q 270 231 252 220 Z" fill="#ffffff"/>
-                  <ellipse cx="270" cy="219" rx="7.5" ry="7.5" fill="#2d1a10"/>
-                  <circle cx="270" cy="219" r="4.2" fill="#0f0906"/>
-                  <circle cx="272.5" cy="217" r="2" fill="#ffffff"/>
-                </g>
-
-                <!-- Eyebrows -->
-                <path d="M 166 206 Q 188 194 212 205" fill="none" stroke="#161719" stroke-width="5" stroke-linecap="round"/>
-                <path d="M 248 205 Q 272 194 294 206" fill="none" stroke="#161719" stroke-width="5" stroke-linecap="round"/>
-
-                <!-- Friendly Smile -->
-                <path d="M 204 278 Q 230 302 256 278" fill="none" stroke="#873e1c" stroke-width="3.8" stroke-linecap="round"/>
-                <path d="M 212 281 Q 230 293 248 281" fill="#ffffff" opacity="0.95"/>
-
-                <!-- Subtle Stubble Details -->
-                <path d="M 214 269 Q 230 267 246 269" fill="none" stroke="#33241b" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
-                <path d="M 215 312 Q 230 322 245 312" fill="none" stroke="#33241b" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-                <path d="M 178 290 Q 200 320 222 325" fill="none" stroke="#33241b" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-                <path d="M 282 290 Q 260 320 238 325" fill="none" stroke="#33241b" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-
-                <!-- Styled Hair with illuminated highlights -->
-                <path d="M 138 180 Q 130 115 190 92 Q 242 78 280 96 Q 330 118 322 180 Q 316 162 305 152 Q 270 142 230 150 Q 192 142 155 154 Q 144 164 138 180 Z" 
-                      fill="url(#hairDark)" 
-                      stroke="url(#hairRimLight)" 
-                      stroke-width="2"/>
-                <path d="M 150 145 Q 178 112 215 124 Q 250 108 290 128 Q 312 140 315 162 Q 290 130 252 136 Q 210 124 172 140 Z" fill="#353942"/>
-                <path d="M 195 115 Q 222 92 260 102 Q 240 112 218 110 Z" fill="#586170" opacity="0.6"/>
-                <path d="M 148 168 Q 162 150 184 154 Q 206 148 228 156 Q 254 148 280 156 Q 302 150 314 168 Q 300 160 274 162 Q 242 156 216 162 Q 184 156 148 168 Z" fill="#1b1c21"/>
-              </g>
-            </svg>
+            <img 
+              id="hero-character-img" 
+              src="mukteswar-profile.png" 
+              alt="Mukteswar Nayak - Data Analyst" 
+              class="hero-photo-img"
+            />
 
             <!-- Available Status Pill -->
             <div class="avatar-status-pill">
@@ -659,18 +502,16 @@
         <!-- Stats & Languages Panel -->
         <div class="gh-stats-panel glass-panel">
           <div class="gh-metric-counters">
-            <div class="gh-metric">
-              <div class="gh-num" id="gh-stat-repos">4</div>
-              <div class="gh-lbl">Public Repos</div>
-            </div>
-            <div class="gh-metric">
-              <div class="gh-num" id="gh-stat-stars">0</div>
-              <div class="gh-lbl">GitHub Stars</div>
-            </div>
-            <div class="gh-metric">
-              <div class="gh-num" id="gh-stat-followers">1</div>
-              <div class="gh-lbl">Followers</div>
-            </div>
+            <div class="gh-num" id="gh-stat-repos">4</div>
+            <div class="gh-lbl">Public Repos</div>
+          </div>
+          <div class="gh-metric">
+            <div class="gh-num" id="gh-stat-stars">0</div>
+            <div class="gh-lbl">GitHub Stars</div>
+          </div>
+          <div class="gh-metric">
+            <div class="gh-num" id="gh-stat-followers">1</div>
+            <div class="gh-lbl">Followers</div>
           </div>
 
           <h4 style="font-size: 1rem; margin-bottom: 1rem; color: #fff;">Primary Languages & Tools:</h4>
