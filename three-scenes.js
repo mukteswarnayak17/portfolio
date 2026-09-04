@@ -29,16 +29,12 @@ class Portfolio3DEngine {
     }
   }
 
-  /* -------------------------------------------------------
-   * MOUSE TRACKING & EVENT SCOPING (Scoped strictly to Orbit)
-   * ------------------------------------------------------- */
   initMouseTracking() {
     window.addEventListener('mousemove', (e) => {
       this.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
       this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
     });
 
-    // Scope mouse drag strictly to the Data Orbit container to prevent page-wide hijacking
     const orbitContainer = document.getElementById('data-orbit-canvas-container');
     if (orbitContainer) {
       orbitContainer.addEventListener('mousedown', (e) => {
@@ -115,7 +111,6 @@ class Portfolio3DEngine {
     const heroGroup = new THREE.Group();
     scene.add(heroGroup);
 
-    // Floating Wireframe Cubes
     const cubes = [];
     const cubeGeo = new THREE.BoxGeometry(1.6, 1.6, 1.6);
     const innerGeo = new THREE.BoxGeometry(0.85, 0.85, 0.85);
@@ -157,7 +152,6 @@ class Portfolio3DEngine {
       cubes.push(wireCube);
     }
 
-    // Floating 3D Chart Prisms
     const chartBars = [];
     const barValues = [2.8, 5.2, 3.6, 6.8, 4.4, 7.8, 5.9, 8.6];
     const chartGroup = new THREE.Group();
@@ -182,7 +176,6 @@ class Portfolio3DEngine {
     });
     heroGroup.add(chartGroup);
 
-    // Constellation Particle Cloud
     const particleCount = 85;
     const particlePositions = new Float32Array(particleCount * 3);
     const particleColors = new Float32Array(particleCount * 3);
@@ -218,7 +211,6 @@ class Portfolio3DEngine {
     const particles = new THREE.Points(particleGeo, particleMat);
     heroGroup.add(particles);
 
-    // Dynamic Line Connections
     const lineGeo = new THREE.BufferGeometry();
     const lineMat = new THREE.LineBasicMaterial({
       color: 0xff2a51,
@@ -251,7 +243,6 @@ class Portfolio3DEngine {
           bar.scale.set(1, Math.max(0.15, wave), 1);
         });
 
-        // Particle physics
         const pos = particles.geometry.attributes.position.array;
         const linePos = [];
 
@@ -286,7 +277,7 @@ class Portfolio3DEngine {
   }
 
   /* -------------------------------------------------------
-   * 2. DATA ORBIT SCENE (Draggable interactive 3D Orbit)
+   * 2. DATA ORBIT SCENE
    * ------------------------------------------------------- */
   initDataOrbitScene() {
     const container = document.getElementById('data-orbit-canvas-container');
@@ -314,7 +305,6 @@ class Portfolio3DEngine {
     const orbitMaster = new THREE.Group();
     scene.add(orbitMaster);
 
-    // Central Glowing Crimson Sphere
     const coreGeo = new THREE.SphereGeometry(3.4, 48, 48);
     const coreMat = new THREE.MeshStandardMaterial({
       color: 0xbe123c,
@@ -327,7 +317,6 @@ class Portfolio3DEngine {
     const coreSphere = new THREE.Mesh(coreGeo, coreMat);
     orbitMaster.add(coreSphere);
 
-    // Inner White Light Core
     const innerGeo = new THREE.SphereGeometry(2.3, 32, 32);
     const innerMat = new THREE.MeshBasicMaterial({
       color: 0xffffff,
@@ -337,7 +326,6 @@ class Portfolio3DEngine {
     const innerCore = new THREE.Mesh(innerGeo, innerMat);
     coreSphere.add(innerCore);
 
-    // 5 Orbiting Satellites: SQL, Python, Power BI, Tableau, Excel
     const orbitData = [
       { name: "SQL", radius: 7.2, speed: 0.65, tilt: 0.25, color: 0xff2a51, size: 1.0 },
       { name: "Python", radius: 9.4, speed: 0.50, tilt: -0.35, color: 0xffffff, size: 1.1 },
