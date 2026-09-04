@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
   color: var(--pure-white);
 }
 
-/* Glassmorphism Classes (Separated transform to avoid tilt jitter) */
+/* Glassmorphism Classes */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: var(--glass-blur);
@@ -304,7 +304,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   HERO SECTION & BACKLIT PROFILE AVATAR
+   HERO SECTION & CHARACTER STAGE
    ========================================================================== */
 .hero-section {
   position: relative;
@@ -438,7 +438,7 @@ h1, h2, h3, h4 {
   margin-top: 0.2rem;
 }
 
-/* Clearly Visible Profile Avatar Card with Glow */
+/* Character Stage & Ambient Glow Backdrop */
 .hero-character-wrapper {
   display: flex;
   justify-content: center;
@@ -447,67 +447,38 @@ h1, h2, h3, h4 {
   z-index: 2;
 }
 
-.hero-avatar-card {
+.hero-character-stage {
   position: relative;
-  width: 360px;
-  max-width: 90vw;
+  width: 100%;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 0;
 }
 
-.avatar-glow-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 330px;
-  height: 330px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 42, 81, 0.45) 0%, rgba(225, 29, 72, 0.18) 48%, transparent 72%);
-  filter: blur(24px);
-  z-index: 1;
-  pointer-events: none;
-  animation: glowPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes glowPulse {
-  0% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.75; }
-  100% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
-}
-
-.avatar-photo-frame {
-  position: relative;
-  z-index: 2;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(135deg, #ffffff 0%, #ff2a51 50%, #e11d48 100%);
-  box-shadow: 0 0 35px rgba(255, 42, 81, 0.5), 0 20px 50px rgba(0, 0, 0, 0.85);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-
-.avatar-photo-frame:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 50px rgba(255, 42, 81, 0.75), 0 25px 60px rgba(0, 0, 0, 0.9);
-}
-
-.hero-avatar-img {
+.hero-character-standalone {
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+  max-width: 440px;
+  height: auto;
+  max-height: 640px;
   display: block;
-  background: #14050b;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  filter: drop-shadow(0 20px 45px rgba(225, 29, 72, 0.45));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-character-standalone:hover {
+  filter: drop-shadow(0 25px 65px rgba(255, 42, 81, 0.65));
+  transform: scale(1.02);
 }
 
 .avatar-status-pill {
   position: relative;
   z-index: 3;
-  margin-top: -1.25rem;
+  margin-top: -1.8rem;
   background: rgba(18, 7, 12, 0.94);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 42, 81, 0.45);
@@ -1668,11 +1639,6 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-/* =: center;
   flex-wrap: wrap;
   gap: 1.2rem;
 }
