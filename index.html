@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mukteswar Nayak | Data Analyst Portfolio</title>
+  
+  <!-- SEO & Open Graph Meta -->
+  <meta name="description" content="Data Analyst specializing in SQL, Python, Power BI, and Tableau to turn raw data into actionable business decisions.">
+  <meta name="keywords" content="Mukteswar Nayak, Data Analyst, Business Analytics, SQL, Python, Power BI, Tableau, Excel, Data Science">
+  <meta name="author" content="Mukteswar Nayak">
+  <meta property="og:title" content="Mukteswar Nayak | Data Analyst Portfolio">
+  <meta property="og:description" content="I don't just analyze data — I turn data into actionable business decisions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mukteswarnayak17.github.io">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet (Red & White Theme) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js 3D Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. STICKY NAVIGATION BAR (Red & White Glassmorphism)                      -->
+  <!-- ========================================================================= -->
+  <header class="navbar" id="main-navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-logo" aria-label="Mukteswar Nayak Home">
+        <div class="logo-cube">MN</div>
+        <span>Mukteswar Nayak</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" id="nav-links-desktop" aria-label="Main Navigation">
+        <!-- Injected dynamically from data.js -->
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <nav id="nav-links-mobile">
+        <!-- Injected dynamically from data.js -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION: 3D ANIMATION & GUARANTEED INLINE CARTOON PORTRAIT       -->
+  <!-- ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <!-- Interactive 3D Background (Red & White Theme) -->
+    <div class="hero-3d-bg" id="hero-3d-canvas-container" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-layout-grid">
+        
+        <!-- Left: Headline, Subheadline & Action Buttons -->
+        <div class="hero-content">
+          <div class="tagline-pill">
+            <span class="pulsing-dot"></span>
+            <span id="hero-badge-text">I don't just analyze data — I turn data into actionable business decisions.</span>
+          </div>
+
+          <h1 class="hero-title gradient-text" id="hero-name">Mukteswar Nayak</h1>
+          <h2 class="hero-headline" id="hero-headline">Data Analyst | Business Analytics | SQL | Python | Power BI | Tableau</h2>
+          <p class="hero-subheadline" id="hero-subheadline">Turning raw data into insights, dashboards, and decisions that create measurable business impact.</p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">VIEW MY WORK ↓</a>
+            <a href="#contact" class="btn btn-secondary">LET'S CONNECT ↗</a>
+            <a href="Mukteswar_Nayak_Resume.pdf" download="Mukteswar_Nayak_Resume.pdf" target="_blank" class="btn btn-secondary" id="hero-download-resume-btn">
+              DOWNLOAD RESUME 📄
+            </a>
+            <button class="btn btn-ghost" id="hero-preview-resume-btn">
+              VIEW RESUME 👁
+            </button>
+          </div>
+
+          <!-- Quick Stats Metric Ribbon -->
+          <div class="hero-quick-stats" id="hero-quick-stats">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Right: Individual Long Animated Cartoon Character (Guaranteed Inline SVG, No Boxes, No Text) -->
+        <div class="hero-character-wrapper" id="hero-character-slot">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 720" width="100%" height="100%" class="hero-character-standalone" id="mukteswar-character-svg" aria-label="Mukteswar Nayak - Animated Cartoon Character Portrait">
+            <defs>
+              <radialGradient id="characterGlow" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#ff2a51" stop-opacity="0.25"/>
+                <stop offset="60%" stop-color="#e11d48" stop-opacity="0.08"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="skinGrad" cx="50%" cy="35%" r="55%">
+                <stop offset="0%" stop-color="#e8a87c"/>
+                <stop offset="65%" stop-color="#d38e5f"/>
+                <stop offset="100%" stop-color="#b87346"/>
+              </radialGradient>
+              <linearGradient id="neckGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#995831"/>
+                <stop offset="100%" stop-color="#c98254"/>
+              </linearGradient>
+              <linearGradient id="hairDark" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#242426"/>
+                <stop offset="60%" stop-color="#121315"/>
+                <stop offset="100%" stop-color="#080809"/>
+              </linearGradient>
+              <linearGradient id="blackSilkShirt" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#22252a"/>
+                <stop offset="25%" stop-color="#14161a"/>
+                <stop offset="70%" stop-color="#090a0d"/>
+                <stop offset="100%" stop-color="#040507"/>
+              </linearGradient>
+              <linearGradient id="collarGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2d323b"/>
+                <stop offset="100%" stop-color="#16181d"/>
+              </linearGradient>
+              <linearGradient id="silverChain" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#cbd5e1"/>
+                <stop offset="50%" stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#94a3b8"/>
+              </linearGradient>
+            </defs>
+            <style>
+              .char-float-anim { transform-origin: 230px 480px; animation: charFloatKey 4s ease-in-out infinite alternate; }
+              .char-eyes-blink { transform-origin: 230px 220px; animation: charBlinkKey 5.5s infinite; }
+              .char-aura-pulse { animation: charAuraKey 3.5s ease-in-out infinite alternate; }
+              @keyframes charFloatKey { 0% { transform: translateY(0px); } 100% { transform: translateY(-12px); } }
+              @keyframes charBlinkKey { 0%, 96%, 100% { transform: scaleY(1); } 98% { transform: scaleY(0.12); } }
+              @keyframes charAuraKey { 0% { opacity: 0.6; transform: scale(0.96); } 100% { opacity: 1; transform: scale(1.04); } }
+            </style>
+            <!-- Ambient Glow -->
+            <ellipse cx="230" cy="360" rx="195" ry="295" fill="url(#characterGlow)" class="char-aura-pulse"/>
+            <!-- Character Body -->
+            <g class="char-float-anim">
+              <!-- Shoulders and Torso -->
+              <path d="M 75 720 L 85 540 Q 105 400 170 380 L 230 435 L 290 380 Q 355 400 375 540 L 385 720 Z" fill="url(#blackSilkShirt)"/>
+              <path d="M 85 540 Q 120 440 170 395" fill="none" stroke="#333842" stroke-width="3" opacity="0.6"/>
+              <path d="M 375 540 Q 340 440 290 395" fill="none" stroke="#333842" stroke-width="3" opacity="0.6"/>
+              <!-- Center Placket & Buttons -->
+              <path d="M 227 450 L 227 720 L 233 720 L 233 450 Z" fill="#1b1d22"/>
+              <circle cx="230" cy="495" r="3" fill="#475569"/>
+              <circle cx="230" cy="555" r="3" fill="#475569"/>
+              <circle cx="230" cy="615" r="3" fill="#475569"/>
+              <circle cx="230" cy="675" r="3" fill="#475569"/>
+              <!-- Open Collar Wings -->
+              <path d="M 170 380 L 230 460 L 202 468 L 138 402 Z" fill="url(#collarGrad)"/>
+              <path d="M 290 380 L 230 460 L 258 468 L 322 402 Z" fill="url(#collarGrad)"/>
+              <!-- Neck & Chest V-Opening -->
+              <path d="M 188 285 L 188 385 L 272 385 L 272 285 Z" fill="url(#neckGrad)"/>
+              <path d="M 195 305 L 195 395 L 265 395 L 265 305 Z" fill="#c98254"/>
+              <!-- Delicate Silver Chain -->
+              <path d="M 200 345 Q 230 388 260 345" fill="none" stroke="url(#silverChain)" stroke-width="2.8" stroke-linecap="round"/>
+              <!-- Ears -->
+              <path d="M 134 220 Q 120 236 134 262 Q 143 266 148 244 Z" fill="#c47d51"/>
+              <path d="M 136 230 Q 130 240 136 250" fill="none" stroke="#995831" stroke-width="2"/>
+              <path d="M 326 220 Q 340 236 326 262 Q 317 266 312 244 Z" fill="#c47d51"/>
+              <path d="M 324 230 Q 330 240 324 250" fill="none" stroke="#995831" stroke-width="2"/>
+              <!-- Facial Contour -->
+              <path d="M 144 175 Q 138 255 166 295 Q 200 330 230 332 Q 260 330 294 295 Q 322 255 316 175 Q 300 115 230 115 Q 160 115 144 175 Z" fill="url(#skinGrad)"/>
+              <!-- Soft Cheek Tone -->
+              <ellipse cx="172" cy="260" rx="16" ry="8" fill="#d97746" opacity="0.35"/>
+              <ellipse cx="288" cy="260" rx="16" ry="8" fill="#d97746" opacity="0.35"/>
+              <!-- Nose -->
+              <path d="M 226 210 Q 230 245 222 252 Q 230 256 238 252 Q 232 238 234 210" fill="#ba6a3d" opacity="0.6"/>
+              <ellipse cx="230" cy="252" rx="6.5" ry="3.5" fill="#a4562c" opacity="0.5"/>
+              <!-- Animated Blinking Eyes -->
+              <g class="char-eyes-blink">
+                <path d="M 172 220 Q 190 207 208 220 Q 190 231 172 220 Z" fill="#ffffff"/>
+                <ellipse cx="190" cy="219" rx="7.5" ry="7.5" fill="#2d1a10"/>
+                <circle cx="190" cy="219" r="4.2" fill="#0f0906"/>
+                <circle cx="192.5" cy="217" r="2" fill="#ffffff"/>
+                <path d="M 252 220 Q 270 207 288 220 Q 270 231 252 220 Z" fill="#ffffff"/>
+                <ellipse cx="270" cy="219" rx="7.5" ry="7.5" fill="#2d1a10"/>
+                <circle cx="270" cy="219" r="4.2" fill="#0f0906"/>
+                <circle cx="272.5" cy="217" r="2" fill="#ffffff"/>
+              </g>
+              <!-- Eyebrows -->
+              <path d="M 166 206 Q 188 194 212 205" fill="none" stroke="#161719" stroke-width="5" stroke-linecap="round"/>
+              <path d="M 248 205 Q 272 194 294 206" fill="none" stroke="#161719" stroke-width="5" stroke-linecap="round"/>
+              <!-- Friendly Smile -->
+              <path d="M 204 278 Q 230 302 256 278" fill="none" stroke="#873e1c" stroke-width="3.8" stroke-linecap="round"/>
+              <path d="M 212 281 Q 230 293 248 281" fill="#ffffff" opacity="0.95"/>
+              <!-- Subtle Stubble Details -->
+              <path d="M 214 269 Q 230 267 246 269" fill="none" stroke="#33241b" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+              <path d="M 215 312 Q 230 322 245 312" fill="none" stroke="#33241b" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+              <path d="M 178 290 Q 200 320 222 325" fill="none" stroke="#33241b" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+              <path d="M 282 290 Q 260 320 238 325" fill="none" stroke="#33241b" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+              <!-- Styled Hair -->
+              <path d="M 138 180 Q 130 115 190 92 Q 242 78 280 96 Q 330 118 322 180 Q 316 162 305 152 Q 270 142 230 150 Q 192 142 155 154 Q 144 164 138 180 Z" fill="url(#hairDark)"/>
+              <path d="M 150 145 Q 178 112 215 124 Q 250 108 290 128 Q 312 140 315 162 Q 290 130 252 136 Q 210 124 172 140 Z" fill="#2c2f36"/>
+              <path d="M 195 115 Q 222 92 260 102 Q 240 112 218 110 Z" fill="#444a54" opacity="0.6"/>
+              <path d="M 148 168 Q 162 150 184 154 Q 206 148 228 156 Q 254 148 280 156 Q 302 150 314 168 Q 300 160 274 162 Q 242 156 216 162 Q 184 156 148 168 Z" fill="#121315"/>
+            </g>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. ABOUT ME SECTION (Concise & Interactive)                               -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ABOUT ME</span>
+        <h2 class="section-title">Turning Complex Data into Strategic Value</h2>
+        <p class="section-subtext">Brief, high-impact analytics focus tailored for decision makers.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-col">
+          <p class="about-intro-highlight" id="about-intro-highlight"></p>
+          <p class="about-val-prop" id="about-val-prop"></p>
+
+          <div class="about-meta-row">
+            <div class="meta-item">
+              <strong>Location:</strong>
+              <span>Chennai, India</span>
+            </div>
+            <div class="meta-item">
+              <strong>Education:</strong>
+              <span>B.Tech in AI & Data Science (CGPA: 8.66 / 10)</span>
+            </div>
+            <div class="meta-item">
+              <strong>Domain:</strong>
+              <span>E-Commerce, FMCG Inventory, SaaS Churn, Executive BI</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" id="about-open-resume-btn">
+              Open Full Resume ↗
+            </button>
+            <a href="https://github.com/mukteswarnayak17" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+              Explore GitHub Profile ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Highlights Cards -->
+        <div class="about-highlights-grid" id="about-highlights-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SKILLS SECTION (Tool Logos + Recruiter Expectations)                   -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TECHNICAL REPERTOIRE</span>
+        <h2 class="section-title">Tools & Recruiter Competencies</h2>
+        <p class="section-subtext">Core tool mastery paired with the exact analytical proficiencies technical recruiters seek.</p>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Injected dynamically with vector SVG logos & recruiter checklists -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. 3D DATA PIPELINE: TOP-NOTCH ANIMATION                                  -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="pipeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TOP-NOTCH 3D PIPELINE</span>
+        <h2 class="section-title">From Raw Data to Business Decisions</h2>
+        <p class="section-subtext">Animated 3D energy stream demonstrating the 7 transformation stages of enterprise analytics.</p>
+      </div>
+
+      <!-- 3D Pipeline Canvas -->
+      <div class="pipeline-3d-wrapper">
+        <div id="pipeline-3d-canvas-container" aria-label="3D Data Pipeline Spline"></div>
+      </div>
+
+      <!-- Interactive 7-Step Nodes -->
+      <div class="pipeline-steps-grid" id="pipeline-steps-container">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Active Stage Inspection Detail Panel -->
+      <div id="pipeline-active-detail">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. SIGNATURE FEATURE: THE DATA ORBIT                                      -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="orbit">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SIGNATURE 3D FEATURE</span>
+        <h2 class="section-title">The Data Orbit</h2>
+        <p class="section-subtext">An interactive 3D solar system of data disciplines orbiting a glowing analytical core.</p>
+      </div>
+
+      <div class="orbit-layout">
+        <!-- 3D Orbit Canvas (Draggable) -->
+        <div id="data-orbit-canvas-container" aria-label="3D Data Orbit Visualizer"></div>
+
+        <div class="orbit-info-col">
+          <h3>Interactive System Synergy</h3>
+          <p>
+            Click and drag the 3D orbit to view how SQL extraction, Python processing, Power BI modeling, Tableau reporting, and Excel scenario modeling rotate harmoniously around business insights.
+          </p>
+
+          <div class="orbit-nodes-explainer">
+            <div class="orbit-node-row">
+              <span class="node-indicator" style="background: #ff2a51;"></span>
+              <span class="node-name">SQL</span>
+              <span class="node-role">Schema extraction, relational joins, window partitioning</span>
+            </div>
+            <div class="orbit-node-row">
+              <span class="node-indicator" style="background: #ffffff;"></span>
+              <span class="node-name">Python</span>
+              <span class="node-role">Pandas data cleaning, NumPy vectorization, Seaborn EDA</span>
+            </div>
+            <div class="orbit-node-row">
+              <span class="node-indicator" style="background: #ff2a51;"></span>
+              <span class="node-name">Power BI</span>
+              <span class="node-role">Star schema modeling, complex DAX measures, KPI scorecards</span>
+            </div>
+            <div class="orbit-node-row">
+              <span class="node-indicator" style="background: #ffffff;"></span>
+              <span class="node-name">Tableau</span>
+              <span class="node-role">LOD expressions, visual drill-down, stakeholder storyboards</span>
+            </div>
+            <div class="orbit-node-row">
+              <span class="node-indicator" style="background: #ff4d6d;"></span>
+              <span class="node-name">Excel</span>
+              <span class="node-role">Ad-hoc modeling, pivot slice & dice, rapid stakeholder checks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 7. PROJECTS SHOWCASE (4 COMPLETED PROJECTS WITH KEY RESULTS)               -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPLETED CASE STUDIES</span>
+        <h2 class="section-title">Built Analytics Projects</h2>
+        <p class="section-subtext">Four completed, end-to-end projects highlighting quantifiable key results and direct GitHub code access.</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Injected dynamically: 4 projects with Key Result banners and GitHub links -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 8. PROJECT CASE STUDY EXPANDED MODAL                                      -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close-x" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modal-case-study-content">
+        <!-- Injected dynamically on click -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 9. GUARANTEED ZERO-ERROR RESUME MODAL (Interactive In-Page Viewer)         -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume Document">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card resume-modal-card">
+      
+      <!-- Modal Action Bar -->
+      <div class="resume-modal-topbar">
+        <div>
+          <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.2rem;">Mukteswar Nayak — Resume</h3>
+          <span style="font-size: 0.8rem; color: var(--accent-rose);">Data Analyst | SQL | Python | Power BI | Tableau</span>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <a href="Mukteswar_Nayak_Resume.pdf" download="Mukteswar_Nayak_Resume.pdf" class="btn btn-primary btn-sm" id="modal-pdf-download-btn">
+            Download PDF 📥
+          </a>
+          <button class="btn btn-secondary btn-sm" onclick="window.print()">
+            Print / Save 🖨️
+          </button>
+          <button class="modal-close-x close-resume-modal-btn" aria-label="Close resume">✕</button>
+        </div>
+      </div>
+
+      <!-- Complete Responsive In-Page ATS Resume Sheet -->
+      <div class="resume-sheet-container">
+        <article class="resume-document-sheet" id="printable-resume">
+          <!-- Resume Header -->
+          <header class="resume-sheet-header">
+            <h1 class="resume-name">MUKTESWAR NAYAK</h1>
+            <div class="resume-contact-line">
+              <span>Chennai, India</span> • 
+              <span>+91-8778670997</span> • 
+              <a href="mailto:mukteswarnayak17@gmail.com">mukteswarnayak17@gmail.com</a> • 
+              <a href="https://linkedin.com/in/mukteswar-nayak" target="_blank">linkedin.com/in/mukteswar-nayak</a> • 
+              <a href="https://github.com/mukteswarnayak17" target="_blank">github.com/mukteswarnayak17</a>
+            </div>
+          </header>
+
+          <!-- Section: Summary -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">PROFESSIONAL SUMMARY</h2>
+            <p class="resume-sec-body">
+              Data Analyst with hands-on experience in SQL, Python, Excel, Power BI, and Tableau, skilled at transforming raw data into actionable business insights. Proven ability to build end-to-end analytics pipelines, develop interactive dashboards, and deliver KPI reports that support stakeholder decision-making. Strong foundation in data cleaning, exploratory data analysis, business intelligence, and data validation. Eager to apply analytical problem-solving in data-intensive environments while collaborating with cross-functional teams to gather business requirements and drive data-informed outcomes.
+            </p>
+          </section>
+
+          <!-- Section: Education -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">EDUCATION</h2>
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>B.Tech in Artificial Intelligence and Data Science</strong>
+                <span class="resume-date">2023 – 2027</span>
+              </div>
+              <div class="resume-subline">
+                <span>Panimalar Engineering College, Chennai</span>
+                <span class="resume-gpa"><b>CGPA: 8.66 / 10</b></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Technical Skills -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">TECHNICAL SKILLS</h2>
+            <div class="resume-skills-block">
+              <div><strong>Programming & Querying:</strong> Python, SQL, MySQL</div>
+              <div><strong>Libraries & Tools:</strong> Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook, Git, GitHub</div>
+              <div><strong>BI & Visualization:</strong> Microsoft Excel, Google Sheets, Power BI, Tableau, DAX, Power Query</div>
+              <div><strong>Analytics & Methodologies:</strong> Data Cleaning, Exploratory Data Analysis (EDA), Dashboard Development, KPI Reporting, Business Intelligence, Data Validation, Insight Generation, Cohort Analysis</div>
+            </div>
+          </section>
+
+          <!-- Section: Experience -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">EXPERIENCE</h2>
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>Data Analyst Trainee</strong>
+                <span class="resume-date">Dec 2024 – Jan 2025</span>
+              </div>
+              <div class="resume-subline">YBI Foundation (Remote)</div>
+              <ul class="resume-bullet-list">
+                <li>Engineered a customer churn analysis solution using Python, Pandas, and Seaborn on 7,043 telecom records, identifying that 38% of churned users were monthly-contract customers within the first 3 months of tenure.</li>
+                <li>Built 6 diagnostic visualizations (heatmaps, histograms, box plots) to segment churn-prone customers and delivered actionable retention recommendations to stakeholders.</li>
+                <li>Documented data cleaning workflows, SQL queries, and analytical findings to maintain data accuracy and support reproducible reporting across the team.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Projects -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">PROJECTS</h2>
+
+            <!-- Project 1 -->
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>Customer Shopping Behavior Analysis</strong>
+                <span class="resume-tools-used">Python | SQL | Power BI</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Architected an end-to-end analytics pipeline using Python, MySQL, and Power BI to process 3,900 customer transaction records and uncover purchasing patterns and revenue trends.</li>
+                <li>Developed interactive dashboards and KPI reports highlighting $233K revenue, 27% subscription rate, and $59.76 average order value to support business performance tracking.</li>
+                <li>Identified Clothing as the top-performing category contributing 44.7% of sales and optimized regional targeting through state-level segmentation, delivering actionable insights for retention and inventory planning.</li>
+              </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>Zepto Inventory Intelligence</strong>
+                <span class="resume-tools-used">SQL | Power BI | Tableau</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Processed and validated 3,732 rows of inventory data using SQL, applying duplicate removal, category standardization, and price conversion to ensure data quality and consistency.</li>
+                <li>Executed 8 SQL queries analyzing inventory value, stockout trends, pricing tiers, and promotional performance; built Power BI and Tableau dashboards for stakeholder reporting.</li>
+                <li>Flagged Biscuits category with 28.57% stockout rate and average stock depth of 3.81 against a target benchmark of 5, enabling operational prioritization and restocking recommendations.</li>
+              </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>B2B SaaS Churn Risk & Customer Health Analysis</strong>
+                <span class="resume-tools-used">Power Query | Python | SQL | Power BI</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Synthesized multi-table account telemetry across 5 CSV datasets; engineered a weighted Customer Health Index (0-100) combining license utilization, billing delays, and support ticket escalations.</li>
+                <li>Discovered that a 40% decline in active license usage preceded churn by an average of 47 days; built executive early-warning dashboards to protect an estimated 18–25% of renewal ARR.</li>
+              </ul>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>Telecom Customer Churn Diagnostic Analysis</strong>
+                <span class="resume-tools-used">Python | Pandas | Seaborn | Matplotlib</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Audited demographic, contract, and billing variables across 7,043 customer accounts; isolated high-risk churn indicators across monthly payment cycles.</li>
+                <li>Delivered actionable customer retention playbooks and interactive statistical visualization models for executive leadership.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Certifications -->
+          <section class="resume-sec">
+            <h2 class="resume-sec-head">CERTIFICATIONS</h2>
+            <div class="resume-entry">
+              <div class="resume-entry-top">
+                <strong>Cisco Data Analytics Essentials</strong>
+                <span class="resume-date">Cisco Networking Academy</span>
+              </div>
+              <p class="resume-cert-desc">
+                Practical training in Excel, SQL, Python, Tableau, data transformation, visualization, dashboard reporting, and analytical problem-solving.
+              </p>
+            </div>
+          </section>
+
+        </article>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 10. EXPERIENCE SECTION (Data Analyst Trainee + Animated Timeline)          -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">APPLIED EXPERIENCE</span>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtext">Hands-on diagnostic modeling, customer health analysis, and technical leadership.</p>
+      </div>
+
+      <div class="experience-timeline" id="experience-timeline-container">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 11. GITHUB SECTION IN NUMBERS (3D VOXEL + STATS)                          -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="github">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">VERIFIED METRICS</span>
+        <h2 class="section-title">My GitHub in Numbers</h2>
+        <p class="section-subtext">Activity and language distribution from @mukteswarnayak17.</p>
+      </div>
+
+      <div class="github-layout">
+        <!-- 3D Contribution Voxel Canvas -->
+        <div id="github-3d-canvas-container" aria-label="3D Contribution Matrix"></div>
+
+        <!-- Stats & Languages Panel -->
+        <div class="gh-stats-panel glass-panel">
+          <div class="gh-metric-counters">
+            <div class="gh-metric">
+              <div class="gh-num" id="gh-stat-repos">4</div>
+              <div class="gh-lbl">Public Repos</div>
+            </div>
+            <div class="gh-metric">
+              <div class="gh-num" id="gh-stat-stars">0</div>
+              <div class="gh-lbl">GitHub Stars</div>
+            </div>
+            <div class="gh-metric">
+              <div class="gh-num" id="gh-stat-followers">1</div>
+              <div class="gh-lbl">Followers</div>
+            </div>
+          </div>
+
+          <h4 style="font-size: 1rem; margin-bottom: 1rem; color: #fff;">Primary Languages & Tools:</h4>
+          <div class="gh-languages-breakdown" id="gh-languages-breakdown">
+            <!-- Injected dynamically -->
+          </div>
+
+          <a href="https://github.com/mukteswarnayak17" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+            VIEW GITHUB PROFILE ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. CONTACT SECTION                                                       -->
+  <!-- ========================================================================= -->
+  <section class="section-wrapper" id="contact">
+    <div class="container">
+      <div class="contact-card-main glass-panel">
+        <div class="contact-layout">
+          <div class="contact-left">
+            <span class="section-tag">START A CONVERSATION</span>
+            <h2>Let's Build Something with Data</h2>
+            <p>
+              "Have a dataset, business problem, or opportunity? Let's turn it into something meaningful."
+            </p>
+
+            <div class="contact-channel-links">
+              <a href="mailto:mukteswarnayak17@gmail.com" class="contact-link-pill" id="contact-email-link">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>mukteswarnayak17@gmail.com</span>
+              </a>
+
+              <a href="tel:+918778670997" class="contact-link-pill" id="contact-phone-link">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+91-8778670997</span>
+              </a>
+
+              <a href="https://github.com/mukteswarnayak17" target="_blank" rel="noopener noreferrer" class="contact-link-pill" id="contact-github-link">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>github.com/mukteswarnayak17</span>
+              </a>
+
+              <a href="https://linkedin.com/in/mukteswar-nayak" target="_blank" rel="noopener noreferrer" class="contact-link-pill" id="contact-linkedin-link">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>linkedin.com/in/mukteswar-nayak</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Inquiry Form -->
+          <div class="contact-right">
+            <form class="contact-form" id="quick-inquiry-form">
+              <div class="form-group">
+                <label for="inquiry-name">Your Name / Organization</label>
+                <input type="text" id="inquiry-name" placeholder="e.g. Alex (Hiring Manager)" required>
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-company">Company or Initiative</label>
+                <input type="text" id="inquiry-company" placeholder="e.g. Analytics Team" required>
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-topic">Role / Opportunity</label>
+                <input type="text" id="inquiry-topic" placeholder="e.g. Data Analyst Role">
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry-message">Brief Note</label>
+                <textarea id="inquiry-message" rows="4" placeholder="Let me know what analytics challenges or opportunities you'd like to discuss..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                SEND MESSAGE DIRECTLY ✉
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 13. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        © 2026 <strong>Mukteswar Nayak</strong> · Data Analyst · Chennai, India
+      </div>
+      <div>
+        Designed for measurable business impact.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="data.js"></script>
+  <script src="three-scenes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
