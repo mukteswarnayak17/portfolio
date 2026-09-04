@@ -70,12 +70,18 @@ function renderHero(data) {
   const headlineEl = document.getElementById('hero-headline');
   const subheadlineEl = document.getElementById('hero-subheadline');
   const badgeEl = document.getElementById('hero-badge-text');
+  const charImgEl = document.getElementById('hero-character-img');
   const downloadResumeBtn = document.getElementById('hero-download-resume-btn');
 
   if (nameEl) nameEl.textContent = profile.name;
   if (headlineEl) headlineEl.textContent = profile.headline;
   if (subheadlineEl) subheadlineEl.textContent = profile.subheadline;
   if (badgeEl) badgeEl.textContent = profile.tagline;
+
+  if (charImgEl) {
+    charImgEl.src = profile.characterImg || "mukteswar-profile.png";
+    charImgEl.alt = `${profile.name} - Data Analyst`;
+  }
 
   if (downloadResumeBtn && profile.resumePdf) {
     downloadResumeBtn.href = profile.resumePdf;
