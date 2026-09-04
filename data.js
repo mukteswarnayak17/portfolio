@@ -22,30 +22,27 @@ const PORTFOLIO_DATA = {
     resumePdf: "Mukteswar_Nayak_Resume.pdf",
     characterImg: "mukteswar-long-cartoon.svg",
     education: "B.Tech in Artificial Intelligence and Data Science (2023 – 2027), Panimalar Engineering College, CGPA: 8.66 / 10",
-    focus: "Revenue Optimization, Inventory Intelligence, Customer Retention, KPI Dashboards"
+    focus: "Revenue Optimization, Inventory Intelligence, Workforce Analytics, Sales Performance"
   },
 
   stats: [
-    { label: "Completed Projects", value: "4", suffix: "", desc: "End-to-end business case studies" },
-    { label: "Records Analyzed", value: "18K+", suffix: "", desc: "E-Commerce, FMCG & Telecom data" },
+    { label: "Completed Projects", value: "4", suffix: "", desc: "End-to-end verified case studies" },
+    { label: "Records Analyzed", value: "25K+", suffix: "", desc: "Retail, Quick Commerce & HR Data" },
     { label: "Core Analytics Tools", value: "6+", suffix: "", desc: "SQL, Python, Power BI, Tableau, Excel, DAX" },
     { label: "Academic CGPA", value: "8.66", suffix: "/10", desc: "Panimalar Engineering College" }
   ],
 
   about: {
     shortIntro: "I am a Data Analyst skilled in transforming complex raw datasets into clear, actionable business decisions through SQL, Python, Power BI, and Tableau.",
-    valueProp: "From identifying $233K revenue drivers to diagnosing warehouse stockout bottlenecks, I design reproducible analytics pipelines and executive dashboards that stakeholders rely on to protect revenue and optimize operations.",
+    valueProp: "From tracking $233K revenue patterns to resolving inventory stockouts and workforce attrition risks, I design reproducible analytics pipelines and executive dashboards that stakeholders rely on to protect revenue and optimize operations.",
     highlights: [
-      { title: "Query Optimization", desc: "Advanced SQL, window partitioning, multi-table joins, and CTEs." },
-      { title: "Statistical EDA", desc: "Python (Pandas, NumPy, Seaborn) data cleaning & cohort modeling." },
-      { title: "Executive Dashboards", desc: "Power BI & Tableau interactive reporting with custom DAX calculations." },
-      { title: "Business Alignment", desc: "Translating ambiguous operational problems into measurable KPI scorecards." }
+      { title: "Query Optimization", desc: "Advanced SQL, analytical window partitioning, multi-table joins, and CTEs." },
+      { title: "Statistical EDA", desc: "Python (Pandas, NumPy, Seaborn) data cleaning, outlier treatment & correlation analysis." },
+      { title: "Executive Dashboards", desc: "Power BI & Tableau interactive reporting with custom DAX measures and KPI scorecards." },
+      { title: "Business Alignment", desc: "Translating ambiguous operational problems into measurable ROI and strategic recommendations." }
     ]
   },
 
-  /* --------------------------------------------------------------------------
-   * SKILLS SECTION (With tool logos & recruiter expectations)
-   * -------------------------------------------------------------------------- */
   skills: [
     {
       name: "SQL & MySQL",
@@ -114,16 +111,13 @@ const PORTFOLIO_DATA = {
       headline: "End-to-End Problem Solving & Stakeholder Communication",
       recruiterExpectations: [
         "Hypothesis-driven Exploratory Data Analysis (EDA)",
-        "Customer Churn & Cohort Retention Modeling (Tenure segmentation)",
+        "Workforce Retention & Attrition Diagnostic Segmentation",
         "Supply Chain & Inventory Health Benchmarking (Stockout & Safety Stock)",
         "Translating Technical Metrics into Measurable ROI & Operational Actions"
       ]
     }
   ],
 
-  /* --------------------------------------------------------------------------
-   * 4 COMPLETED PROJECTS (Strictly built projects with key results & GitHub links)
-   * -------------------------------------------------------------------------- */
   projects: [
     {
       id: "customer-shopping-behavior",
@@ -131,9 +125,9 @@ const PORTFOLIO_DATA = {
       subtitle: "E-Commerce Transactional Segmentation & Executive Revenue Dashboard",
       category: "E-Commerce & Retail Analytics",
       tags: ["Python", "SQL", "Power BI", "Pandas", "EDA"],
-      github: "https://github.com/mukteswarnayak17/Customer-Shopping-Behavior-Analysis",
+      github: "https://github.com/mukteswarnayak17/customer-shopping-behavior-analysis-python-sql-powerbi",
       fallbackGithub: "https://github.com/mukteswarnayak17",
-      keyResult: "Tracked $233K Revenue, benchmarked $59.76 AOV, and identified Clothing as the 44.7% top revenue anchor across 3,900 orders.",
+      keyResult: "Tracked $233K Revenue across 3,900 orders, benchmarked $59.76 AOV, and identified Clothing as the 44.7% top revenue anchor.",
       kpis: [
         { label: "Transactions Analyzed", value: "3,900" },
         { label: "Gross Revenue Tracked", value: "$233K" },
@@ -161,14 +155,14 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id: "zepto-inventory-intelligence",
-      title: "Zepto Inventory Intelligence",
+      id: "zepto-inventory-analysis",
+      title: "Zepto Inventory BI Analysis",
       subtitle: "Quick-Commerce Stockout Risk & SKU Restocking Analytics",
       category: "Quick Commerce & Supply Chain",
       tags: ["SQL", "Power BI", "Tableau", "MySQL", "Excel"],
-      github: "https://github.com/mukteswarnayak17/Zepto-Inventory-Intelligence",
+      github: "https://github.com/mukteswarnayak17/zepto-inventory-bi-analysis",
       fallbackGithub: "https://github.com/mukteswarnayak17",
-      keyResult: "Flagged a 28.57% stockout rate in the Biscuits category and recalibrated safety stock depth from 3.81 to the benchmark target of 5.0.",
+      keyResult: "Flagged a 28.57% stockout rate in high-velocity categories and recalibrated safety stock depth from 3.81 to the benchmark target of 5.0.",
       kpis: [
         { label: "Inventory Rows Validated", value: "3,732" },
         { label: "Target Stockout Flagged", value: "28.57%" },
@@ -196,80 +190,77 @@ const PORTFOLIO_DATA = {
       }
     },
     {
-      id: "b2b-saas-churn-retention",
-      title: "B2B SaaS Churn Risk & Customer Health Analysis",
-      subtitle: "Early-Warning Churn Scoring & Renewal Risk Dashboard",
-      category: "Customer Health & Retention Analytics",
-      tags: ["Power BI", "Python", "SQL", "Power Query", "Excel"],
-      github: "https://github.com/mukteswarnayak17/B2B-SaaS-Churn-Risk-Customer-Health-Analysis",
+      id: "walmart-sales-analysis",
+      title: "Walmart Sales Data Analysis",
+      subtitle: "Multi-Branch Revenue Drivers, Seasonal Demand & Profit Margin Modeling",
+      category: "Retail Analytics & Operations",
+      tags: ["Python", "SQL", "Pandas", "MySQL", "EDA"],
+      github: "https://github.com/mukteswarnayak17/walmart-data-analysis-python-sql",
       fallbackGithub: "https://github.com/mukteswarnayak17",
-      keyResult: "Identified that 38% of at-risk accounts were monthly-contract users in their first 90 days; protected an estimated 18–25% of renewal ARR.",
+      keyResult: "Evaluated 45 branch locations, identified an 18.4% holiday sales surge, and isolated CPI & fuel costs as primary sales volatility drivers.",
       kpis: [
-        { label: "Account Datasets", value: "5 CSVs" },
-        { label: "Early-Tenure At-Risk", value: "38%" },
-        { label: "High-Risk Churn Signal", value: "82%" },
-        { label: "Vulnerable ARR Saved", value: "18 - 25%" }
+        { label: "Store Branches", value: "45 Locations" },
+        { label: "Holiday Sales Lift", value: "+18.4%" },
+        { label: "Core Stack", value: "Python & SQL" },
+        { label: "Analysis Focus", value: "Store Margins" }
       ],
       caseStudy: {
-        businessProblem: "A recurring subscription SaaS enterprise suffered unmonitored customer attrition. Account management teams operated reactively, lacking an early-warning diagnostic mechanism before contract expiration.",
-        dataset: "5 relational business CSV files including Account Profiles, Monthly Invoicing Logs, Feature Adoption Telemetry, Support Tickets, and Contract Renewals.",
+        businessProblem: "Retail management required detailed insights into store performance variations across 45 branches, evaluating how holiday weeks, macroeconomic indicators (CPI, unemployment), and temperature fluctuations impact gross sales and product line demand.",
+        dataset: "Multi-year store branch transaction records detailing weekly sales, holiday indicators, regional CPI, fuel prices, and store characteristics.",
         processSteps: [
-          { step: "Multi-Source Data Ingestion", detail: "Unified 5 disparate CSV sources into a relational star schema using Power Query and Python Pandas scripts." },
-          { step: "Cleaning & Normalization", detail: "Standardized timestamp fields, resolved null churn indicators, and normalized user activity metrics across contract tiers." },
-          { step: "SQL & Python Feature Engineering", detail: "Engineered rolling 30-day usage declines, ticket escalation frequencies, and net login velocity using SQL window functions." },
-          { step: "Customer Health Index (CHI)", detail: "Formulated a composite 0–100 health score weighting feature adoption (40%), ticket resolution time (30%), and payment punctuality (30%)." },
-          { step: "Power BI Executive Dashboard", detail: "Built an interactive 3-page scorecard displaying churn probability distributions, risk quadrants, and account drill-throughs." },
-          { step: "Retention Playbook", detail: "Configured automated alert notifications for Customer Success Managers when an account's CHI dropped below 60 points." }
+          { step: "Data Audit & Transformation", detail: "Ingested raw weekly sales data using Python Pandas, parsed date structures, validated zero-sales periods, and cleaned economic indicator fields." },
+          { step: "SQL Relational Queries", detail: "Wrote SQL queries to rank top-performing branches by total annual revenue, average weekly volume, and holiday versus non-holiday performance." },
+          { step: "Statistical Correlation Modeling", detail: "Constructed heatmaps and scatter plots in Seaborn to isolate the influence of CPI fluctuations and fuel costs on weekly branch revenue." },
+          { step: "Holiday Impact Evaluation", detail: "Discovered that designated holiday sales weeks produced an average 18.4% revenue surge compared to baseline weeks." },
+          { step: "Branch-Level Segmentation", detail: "Categorized branches into Tier-1, Tier-2, and Underperforming clusters based on revenue stability and promotional sensitivity." },
+          { step: "Inventory & Staffing Strategy", detail: "Formulated proactive recommendations for labor scheduling and advance warehouse stock transfers prior to high-volume holiday windows." }
         ],
-        tools: ["Python (Pandas, NumPy, Seaborn)", "MySQL & Window Functions", "Power BI Desktop & Service", "Power Query ETL", "Excel"],
+        tools: ["Python (Pandas, NumPy, Seaborn, Matplotlib)", "SQL (MySQL)", "Jupyter Notebook", "Microsoft Excel"],
         keyInsights: [
-          "Accounts logging >3 unresolved support tickets in their first 60 days exhibited an 82% churn probability at renewal.",
-          "A 40% decline in active license usage preceded customer cancellations by an average of 47 days, acting as the primary leading indicator.",
-          "Annual contract accounts delivered 3.2x higher lifetime customer value (LTV) and 64% lower churn than month-to-month plans."
+          "Designated holiday weeks generated an 18.4% spike in sales, requiring early replenishment cycles 14 days prior.",
+          "Branches in regions with high CPI fluctuations showed greater price sensitivity, benefiting most from discount promotions.",
+          "Top 10 performing branches generated over 34% of total cumulative retail revenue across all 45 evaluated locations."
         ],
-        businessImpact: "Empowered Customer Success teams to intervene with targeted retention offers 45+ days prior to renewal dates, safeguarding an estimated 18% to 25% of vulnerable renewal ARR."
+        businessImpact: "Delivered actionable revenue benchmarks enabling regional retail managers to optimize inventory allocations and staffing schedules ahead of peak shopping periods."
       }
     },
     {
-      id: "telecom-customer-churn",
-      title: "Telecom Customer Churn Diagnostic Analysis",
-      subtitle: "Multi-Variable Churn Segmentation & Diagnostic Visualizations",
-      category: "Predictive & Diagnostic Analytics",
-      tags: ["Python", "Pandas", "Seaborn", "Matplotlib", "YBI Foundation"],
-      github: "https://github.com/mukteswarnayak17",
+      id: "employee-attrition-analysis",
+      title: "Employee Attrition Analysis",
+      subtitle: "Workforce Retention Diagnostics & Interactive Power BI HR Scorecard",
+      category: "HR & Workforce Analytics",
+      tags: ["Power BI", "DAX", "Power Query", "Excel", "HR Analytics"],
+      github: "https://github.com/mukteswarnayak17/employee-attrition-analysis-powerbi",
       fallbackGithub: "https://github.com/mukteswarnayak17",
-      keyResult: "Analyzed 7,043 telecom accounts, engineered 6 diagnostic EDA models, and surfaced a 38% churn concentration in month-to-month contracts.",
+      keyResult: "Analyzed 1,470 employee records, uncovered a 16.1% overall attrition baseline, and flagged a 32% turnover spike in high-overtime cohorts.",
       kpis: [
-        { label: "Customer Records", value: "7,043" },
-        { label: "EDA Visualizations", value: "6 Models" },
-        { label: "Early-Tenure Churn", value: "38%" },
-        { label: "Industry Domain", value: "Telecom" }
+        { label: "Workforce Records", value: "1,470" },
+        { label: "Baseline Attrition", value: "16.1%" },
+        { label: "Overtime Churn Rate", value: "32.0%" },
+        { label: "BI Modeling", value: "DAX Measures" }
       ],
       caseStudy: {
-        businessProblem: "A major telecommunications provider faced heavy customer attrition across new subscriber cohorts and lacked statistical validation on whether pricing, contract length, or service outages drove customer churn.",
-        dataset: "7,043 customer account records capturing demographic variables, contract durations, payment methods, monthly charges, total billing, and churn outcomes.",
+        businessProblem: "A growing enterprise experienced recurring employee turnover across technical and sales roles, incurring substantial recruiting and onboarding costs without clear visibility into attrition root causes.",
+        dataset: "1,470 employee demographic, compensation, and performance records covering job roles, monthly income, overtime status, commute distance, and tenure.",
         processSteps: [
-          { step: "Data Audit & Integrity Checks", detail: "Cleaned raw records in Python Pandas, converting data types and validating zero-tenure records." },
-          { step: "Exploratory Diagnostic Modeling", detail: "Constructed 6 statistical visualizations (correlation heatmaps, tenure histograms, charge box plots) to isolate churn variables." },
-          { step: "Tenure & Contract Segmentation", detail: "Discovered that 38% of all churned customers were on monthly contracts within their initial 3 months of service." },
-          { step: "Payment & Service Analysis", detail: "Demonstrated that electronic check payment users had significantly higher churn rates compared to automated bank transfer customers." },
-          { step: "Stakeholder Briefing & Playbook", detail: "Synthesized statistical findings into an executive report recommending early-onboarding milestone incentives." },
-          { step: "Documentation & Reproducibility", detail: "Documented the entire exploratory analytics workflow and Python scripts in Jupyter notebooks for team adoption." }
+          { step: "Data Cleaning in Power Query", detail: "Loaded workforce records into Power Query, standardized age and tenure bands, removed redundant columns, and validated data types." },
+          { step: "Data Modeling & Star Schema", detail: "Built a star schema model linking employee fact tables with department, role, and salary tier dimension tables." },
+          { step: "Custom DAX Measure Development", detail: "Authored advanced DAX measures to calculate Attrition Rate %, Average Monthly Income, Tenure Distribution, and Turnover Volatility." },
+          { step: "Multi-Variable Churn Isolation", detail: "Surfaced that employees working frequent overtime experienced a 32% attrition rate compared to only 10% for non-overtime peers." },
+          { step: "Interactive Power BI Dashboard", detail: "Designed dynamic KPI cards, department slicers, income distribution box charts, and tenure risk heatmaps." },
+          { step: "HR Retention Playbook", detail: "Delivered structured guidelines to HR leadership recommending overtime workload caps and retention bonuses for roles with 0–2 years of tenure." }
         ],
-        tools: ["Python (Pandas, NumPy, Seaborn, Matplotlib)", "Jupyter Notebook", "Statistical EDA"],
+        tools: ["Power BI Desktop", "DAX (Data Analysis Expressions)", "Power Query ETL", "Microsoft Excel"],
         keyInsights: [
-          "38% of all churn events occurred within the first 90 days of onboarding among monthly contract subscribers.",
-          "Customers with fiber-optic internet and higher monthly charges experienced higher churn unless bundled with digital security add-ons.",
-          "Two-year contract commitments reduced churn risk by over 75% compared to standard month-to-month arrangements."
+          "Employees working overtime exhibited a 32% attrition rate, more than double the company-wide average of 16.1%.",
+          "Entry-level employees with 0–2 years of tenure represented 43% of all voluntary departures.",
+          "Departments with lower median monthly compensation experienced a 24% higher churn frequency among skilled roles."
         ],
-        businessImpact: "Provided executive stakeholders with statistical justification to overhaul the first-90-days customer onboarding journey and promote contract-lengthening incentives."
+        businessImpact: "Empowered HR directors and executive leadership with an interactive diagnostic dashboard to identify at-risk teams and implement targeted retention programs that preserve institutional knowledge."
       }
     }
   ],
 
-  /* --------------------------------------------------------------------------
-   * 7-STAGE PIPELINE
-   * -------------------------------------------------------------------------- */
   pipelineSteps: [
     {
       id: "raw",
@@ -322,9 +313,6 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /* --------------------------------------------------------------------------
-   * EXPERIENCE SECTION (Updated role: Data Analyst Trainee)
-   * -------------------------------------------------------------------------- */
   experience: [
     {
       role: "Data Analyst Trainee",
@@ -347,7 +335,7 @@ const PORTFOLIO_DATA = {
       location: "Chennai, India",
       highlights: [
         "Specializing in relational database management systems (RDBMS), statistical modeling, Python data structures, and business intelligence.",
-        "Developed comprehensive business analytics case studies including E-Commerce Revenue Optimization ($233K analyzed) and Zepto Inventory Intelligence (3,732 rows).",
+        "Developed comprehensive business analytics case studies including E-Commerce Revenue Optimization ($233K analyzed) and Zepto Inventory BI Analysis (3,732 rows).",
         "Maintains strong academic performance with an active 8.66 / 10 CGPA."
       ],
       technologies: ["SQL", "Python", "Power BI", "Tableau", "MySQL", "Excel", "DAX"]
