@@ -5,7 +5,7 @@
  * Powers:
  * 1. Home 3D Background (Ruby cubes, white constellation particles, floating chart prisms)
  * 2. Data Orbit (Central pulsing crimson core + 5 orbiting satellites with trails)
- * 3. 3D Pipeline (Top-notch glowing spline with energy packets & expanding radar rings)
+ * 3. 3D Pipeline (Glowing spline with energy packets & expanding radar rings)
  * 4. 3D GitHub Voxel Matrix (Crimson-to-white activity landscape)
  */
 
@@ -13,8 +13,11 @@ class Portfolio3DEngine {
   constructor() {
     this.isThreeAvailable = typeof THREE !== 'undefined';
     this.scenes = {};
-    this.mouse = { x: 0, y: 0, targetX: 0, targetY: 0, isDown: false, prevX: 0, prevY: 0 };
-    this.orbitRotation = { x: 0.1, y: 0 };
+    this.mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+    this.orbitRotation = { x: 0.15, y: 0 };
+    this.orbitDragging = false;
+    this.orbitPrevX = 0;
+    this.orbitPrevY = 0;
     
     this.initMouseTracking();
 
@@ -26,30 +29,39 @@ class Portfolio3DEngine {
     }
   }
 
+  /* -------------------------------------------------------
+   * MOUSE TRACKING & EVENT SCOPING (Scoped strictly to Orbit)
+   * ------------------------------------------------------- */
   initMouseTracking() {
     window.addEventListener('mousemove', (e) => {
       this.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
       this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-
-      if (this.mouse.isDown) {
-        const deltaX = e.clientX - this.mouse.prevX;
-        const deltaY = e.clientY - this.mouse.prevY;
-        this.orbitRotation.y += deltaX * 0.008;
-        this.orbitRotation.x += deltaY * 0.008;
-        this.mouse.prevX = e.clientX;
-        this.mouse.prevY = e.clientY;
-      }
     });
 
-    window.addEventListener('mousedown', (e) => {
-      this.mouse.isDown = true;
-      this.mouse.prevX = e.clientX;
-      this.mouse.prevY = e.clientY;
-    });
+    // Scope mouse drag strictly to the Data Orbit container to prevent page-wide hijacking
+    const orbitContainer = document.getElementById('data-orbit-canvas-container');
+    if (orbitContainer) {
+      orbitContainer.addEventListener('mousedown', (e) => {
+        this.orbitDragging = true;
+        this.orbitPrevX = e.clientX;
+        this.orbitPrevY = e.clientY;
+      });
 
-    window.addEventListener('mouseup', () => {
-      this.mouse.isDown = false;
-    });
+      window.addEventListener('mousemove', (e) => {
+        if (this.orbitDragging) {
+          const deltaX = e.clientX - this.orbitPrevX;
+          const deltaY = e.clientY - this.orbitPrevY;
+          this.orbitRotation.y += deltaX * 0.008;
+          this.orbitRotation.x += deltaY * 0.008;
+          this.orbitPrevX = e.clientX;
+          this.orbitPrevY = e.clientY;
+        }
+      });
+
+      window.addEventListener('mouseup', () => {
+        this.orbitDragging = false;
+      });
+    }
 
     window.addEventListener('resize', () => {
       this.onWindowResize();
@@ -61,15 +73,17 @@ class Portfolio3DEngine {
       if (s.renderer && s.camera && s.container) {
         const width = s.container.clientWidth;
         const height = s.container.clientHeight;
-        s.camera.aspect = width / height;
-        s.camera.updateProjectionMatrix();
-        s.renderer.setSize(width, height);
+        if (width > 0 && height > 0) {
+          s.camera.aspect = width / height;
+          s.camera.updateProjectionMatrix();
+          s.renderer.setSize(width, height);
+        }
       }
     });
   }
 
   /* -------------------------------------------------------
-   * 1. HOME 3D BACKGROUND (Red & White High-Fidelity)
+   * 1. HOME 3D BACKGROUND
    * ------------------------------------------------------- */
   initHeroScene() {
     const container = document.getElementById('hero-3d-canvas-container');
@@ -87,7 +101,6 @@ class Portfolio3DEngine {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    // Dynamic Red & White Lighting
     const ambientLight = new THREE.AmbientLight(0x2a0812, 2.8);
     scene.add(ambientLight);
 
@@ -102,7 +115,7 @@ class Portfolio3DEngine {
     const heroGroup = new THREE.Group();
     scene.add(heroGroup);
 
-    // Floating 3D Wireframe Cubes with Glowing Ruby & White Cores
+    // Floating Wireframe Cubes
     const cubes = [];
     const cubeGeo = new THREE.BoxGeometry(1.6, 1.6, 1.6);
     const innerGeo = new THREE.BoxGeometry(0.85, 0.85, 0.85);
@@ -144,7 +157,7 @@ class Portfolio3DEngine {
       cubes.push(wireCube);
     }
 
-    // Floating 3D Analytical Bar Chart Prisms
+    // Floating 3D Chart Prisms
     const chartBars = [];
     const barValues = [2.8, 5.2, 3.6, 6.8, 4.4, 7.8, 5.9, 8.6];
     const chartGroup = new THREE.Group();
@@ -169,7 +182,7 @@ class Portfolio3DEngine {
     });
     heroGroup.add(chartGroup);
 
-    // Red & White Constellation Particle Cloud
+    // Constellation Particle Cloud
     const particleCount = 85;
     const particlePositions = new Float32Array(particleCount * 3);
     const particleColors = new Float32Array(particleCount * 3);
@@ -181,7 +194,7 @@ class Portfolio3DEngine {
       particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 24;
 
       const isWhite = Math.random() > 0.45;
-      particleColors[i * 3] = isWhite ? 1.0 : 1.0;
+      particleColors[i * 3] = 1.0;
       particleColors[i * 3 + 1] = isWhite ? 1.0 : 0.16;
       particleColors[i * 3 + 2] = isWhite ? 1.0 : 0.32;
 
@@ -238,7 +251,7 @@ class Portfolio3DEngine {
           bar.scale.set(1, Math.max(0.15, wave), 1);
         });
 
-        // Particle physics & connecting lines
+        // Particle physics
         const pos = particles.geometry.attributes.position.array;
         const linePos = [];
 
@@ -273,7 +286,7 @@ class Portfolio3DEngine {
   }
 
   /* -------------------------------------------------------
-   * 2. DATA ORBIT SCENE (Interactive 3D Red & White Orbit)
+   * 2. DATA ORBIT SCENE (Draggable interactive 3D Orbit)
    * ------------------------------------------------------- */
   initDataOrbitScene() {
     const container = document.getElementById('data-orbit-canvas-container');
@@ -314,7 +327,7 @@ class Portfolio3DEngine {
     const coreSphere = new THREE.Mesh(coreGeo, coreMat);
     orbitMaster.add(coreSphere);
 
-    // Inner Pure White Light Core
+    // Inner White Light Core
     const innerGeo = new THREE.SphereGeometry(2.3, 32, 32);
     const innerMat = new THREE.MeshBasicMaterial({
       color: 0xffffff,
@@ -336,7 +349,6 @@ class Portfolio3DEngine {
     const satellites = [];
 
     orbitData.forEach(item => {
-      // Orbit Ring
       const ringGeo = new THREE.RingGeometry(item.radius - 0.05, item.radius + 0.05, 72);
       const ringMat = new THREE.MeshBasicMaterial({
         color: item.color,
@@ -349,7 +361,6 @@ class Portfolio3DEngine {
       ring.rotation.y = item.tilt * 0.4;
       orbitMaster.add(ring);
 
-      // Satellite Sphere
       const satGeo = new THREE.SphereGeometry(item.size, 24, 24);
       const satMat = new THREE.MeshStandardMaterial({
         color: item.color,
@@ -360,7 +371,6 @@ class Portfolio3DEngine {
       });
       const satMesh = new THREE.Mesh(satGeo, satMat);
 
-      // Halo
       const haloGeo = new THREE.SphereGeometry(item.size * 1.45, 16, 16);
       const haloMat = new THREE.MeshBasicMaterial({
         color: item.color,
@@ -398,9 +408,8 @@ class Portfolio3DEngine {
           sat.mesh.rotation.y += 0.02;
         });
 
-        // Interactive 3D drag & mouse rotation
-        orbitMaster.rotation.y = this.orbitRotation.y + (this.mouse.x * 0.25);
-        orbitMaster.rotation.x = this.orbitRotation.x - (this.mouse.y * 0.15);
+        orbitMaster.rotation.y = this.orbitRotation.y;
+        orbitMaster.rotation.x = this.orbitRotation.x;
 
         renderer.render(scene, camera);
       }
@@ -408,7 +417,7 @@ class Portfolio3DEngine {
   }
 
   /* -------------------------------------------------------
-   * 3. TOP-NOTCH 3D PIPELINE SCENE (Red & White Spline Stream)
+   * 3. 3D PIPELINE SCENE
    * ------------------------------------------------------- */
   initPipelineScene() {
     const container = document.getElementById('pipeline-3d-canvas-container');
@@ -434,7 +443,6 @@ class Portfolio3DEngine {
     pLight.position.set(0, 12, 15);
     scene.add(pLight);
 
-    // 7 Pipeline Station Points on an elegant 3D undulating curve
     const stageCount = 7;
     const points = [];
     for (let i = 0; i < stageCount; i++) {
@@ -447,7 +455,6 @@ class Portfolio3DEngine {
 
     const curve = new THREE.CatmullRomCurve3(points);
 
-    // Spline Conduit Tube
     const tubeGeo = new THREE.TubeGeometry(curve, 120, 0.24, 16, false);
     const tubeMat = new THREE.MeshStandardMaterial({
       color: 0x2b0d14,
@@ -460,7 +467,6 @@ class Portfolio3DEngine {
     const tubeMesh = new THREE.Mesh(tubeGeo, tubeMat);
     scene.add(tubeMesh);
 
-    // Station Nodes with Pulsing Radar Rings
     const stageNodes = [];
     const radarRings = [];
 
@@ -468,7 +474,6 @@ class Portfolio3DEngine {
       const isDecision = idx === stageCount - 1;
       const isStart = idx === 0;
 
-      // Central node sphere
       const nodeGeo = new THREE.SphereGeometry(isDecision ? 1.2 : 0.85, 24, 24);
       const nodeMat = new THREE.MeshStandardMaterial({
         color: isDecision ? 0xffffff : (isStart ? 0xff4d6d : 0xff2a51),
@@ -482,7 +487,6 @@ class Portfolio3DEngine {
       scene.add(nodeMesh);
       stageNodes.push(nodeMesh);
 
-      // Expanding Radar Ring
       const ringGeo = new THREE.RingGeometry(1.2, 1.35, 32);
       const ringMat = new THREE.MeshBasicMaterial({
         color: 0xff2a51,
@@ -497,7 +501,6 @@ class Portfolio3DEngine {
       radarRings.push({ mesh: ring, baseScale: 1.0 });
     });
 
-    // High-Speed Traveling Energy Packets (Red & White Sparks)
     const packetCount = 28;
     const packets = [];
     const packetGeo = new THREE.SphereGeometry(0.36, 16, 16);
@@ -532,7 +535,6 @@ class Portfolio3DEngine {
           const pos = curve.getPoint(p.offset);
           p.mesh.position.copy(pos);
 
-          // Color shift to white at the final decision stage
           if (p.offset > 0.88) {
             p.mesh.material.color.setHex(0xffffff);
           } else {
@@ -540,7 +542,6 @@ class Portfolio3DEngine {
           }
         });
 
-        // Pulsate station nodes and radar rings
         stageNodes.forEach((node, idx) => {
           const pulse = 1 + Math.sin(time * 3 + idx * 0.8) * 0.14;
           node.scale.set(pulse, pulse, pulse);
@@ -593,13 +594,12 @@ class Portfolio3DEngine {
     const spacing = 1.15;
     const voxels = [];
 
-    // Red and White Voxel Gradient
     const palette = [
-      0x1a0b10, // 0 commits (dark obsidian)
-      0x4c0519, // low
-      0x9f1239, // medium
-      0xe11d48, // high (crimson)
-      0xffffff  // max (pure white glow)
+      0x1a0b10,
+      0x4c0519,
+      0x9f1239,
+      0xe11d48,
+      0xffffff
     ];
 
     for (let c = 0; c < cols; c++) {
