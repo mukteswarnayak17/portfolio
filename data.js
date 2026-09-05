@@ -34,7 +34,7 @@ const PORTFOLIO_DATA = {
 
   about: {
     shortIntro: "I am a Data Analyst skilled in transforming complex raw datasets into clear, actionable business decisions through SQL, Python, Power BI, and Tableau.",
-    valueProp: "From tracking $233K revenue patterns to resolving inventory stockouts and workforce attrition risks, I design reproducible analytics pipelines and executive dashboards that stakeholders rely on to protect revenue and optimize operations.",
+    valueProp: "I design reproducible analytics pipelines and executive dashboards that stakeholders rely on to protect revenue and optimize operations.",
     highlights: [
       { title: "Query Optimization", desc: "Advanced SQL, analytical window partitioning, multi-table joins, and CTEs." },
       { title: "Statistical EDA", desc: "Python (Pandas, NumPy, Seaborn) data cleaning, outlier treatment & correlation analysis." },
