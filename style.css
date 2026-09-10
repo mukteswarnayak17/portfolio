@@ -1763,3 +1763,34 @@ h1, h2, h3, h4 {
     max-width: 100% !important;
   }
 }
+/* Container dimensions and viewport isolation */
+#pipeline-3d-canvas-container,
+#data-orbit-canvas-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pipeline-3d-canvas-container {
+  height: 420px;
+}
+
+#data-orbit-canvas-container {
+  height: 480px;
+  cursor: grab;
+}
+
+#data-orbit-canvas-container:active {
+  cursor: grabbing;
+}
+
+#pipeline-3d-canvas-container canvas,
+#data-orbit-canvas-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+}
