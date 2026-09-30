@@ -13,7 +13,7 @@ export const PORTFOLIO_DATA = {
     githubUrl: "https://github.com/mukteswarnayak17",
     linkedinUrl: "https://linkedin.com/in/mukteswar-nayak",
     resumePdf: "/Mukteswar_Nayak_Resume.pdf",
-    characterImg: "/images/mukteswar-profile.png",
+    characterImg: "/src/assets/mukteswar-profile.png",
     education: "B.Tech in Artificial Intelligence and Data Science (2023 – 2027), Panimalar Engineering College, CGPA: 8.66 / 10",
     focus: "Revenue Optimization, Inventory Intelligence, Workforce Analytics, Sales Performance"
   },
