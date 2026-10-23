@@ -44,7 +44,7 @@ export default function App() {
                 <span style={{ fontSize: '0.8rem', color: 'var(--accent-rose)' }}>{profile.title}</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem' }}>
-                <a href={profile.resumePdf} download="Mukteswar_Nayak_Resume.pdf" className="btn btn-primary btn-sm">
+                <a href={profile.resumePdf} download="Mukteswar_Nayak_Resume_.pdf" className="btn btn-primary btn-sm">
                   Download PDF 📥
                 </a>
                 <button className="btn btn-ghost btn-sm" onClick={() => setResumeModalOpen(false)}>
